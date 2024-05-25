@@ -20,22 +20,22 @@ const App = () => {
     };
   }, []);
 
-  const renderRoute = () => {
-    switch (route) {
-      case '/':
-        return;
-      case '/services':
-        return;
-      case '/projects':
-        return;
-      case '/news':
-        return;
-      case '/contact':
-        return;
-      default:
-        return;
-    }
-  };
+  // const renderRoute = () => {
+  //   switch (route) {
+  //     case '/':
+  //       return;
+  //     case '/services':
+  //       return;
+  //     case '/projects':
+  //       return;
+  //     case '/news':
+  //       return;
+  //     case '/contact':
+  //       return;
+  //     default:
+  //       return;
+  //   }
+  // };
 
   return (
     <div>
@@ -127,7 +127,7 @@ const App = () => {
         </div>
         <i className="fa-solid fa-share share-icon"></i>
       </nav>
-      {renderRoute()}
+      {/* {renderRoute()} */}
       <Landing />
     </div>
   );
