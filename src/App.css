@@ -1,38 +1,235 @@
-.App {
-  text-align: center;
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-container {
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar-logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon.open {
+  display: block;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #333;
+  }
+
+  .nav-menu.open {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
+/* App.css */
+.custom-search-input::placeholder {
+  color: white;
+  opacity: 1; /* Ensures the color is fully applied */
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Optional: Adjust the color for different browsers */
+.custom-search-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.custom-search-input::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* App.css */
+/* App.css */
+#First {
+  color: white;
+  font-size: 44px;
+  margin-top: 5%;
+}
+
+#second {
+  color: white;
+  font-size: 15px;
+}
+
+@media (max-width: 500px) {
+  #First {
+    font-size: 23px; /* Decrease font size for mobile view */
   }
-  to {
-    transform: rotate(360deg);
+  #long{
+    height:1px;
+  }
+  
+  #second {
+    font-size: 14px; /* Decrease font size for mobile view */
+    color:rgba(255, 255, 255, 0.743);
+  }
+  #Third {
+    font-size: 1px; /* Decreased font size for mobile */
+  }
+
+  #Four {
+    font-size: 12px; /* Decreased font size for mobile */
+  }
+  
+}
+.card-deck {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Default: 6 cards per row on desktop */
+   /* Add some space between cards */
+}
+
+@media only screen and (max-width: 768px) {
+  .card-deck {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on mobile */
+    gap: 20px;
   }
 }
+
+
+#Third {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#Four {
+  color: white;
+  font-size: 14px;
+}
+
+.form-inline {
+  margin: 20px 0;
+}
+
+.custom-search-input {
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 30px;
+  color:white;
+  height: 7vh;
+  width: 700px;
+  padding-right: 150px;
+}
+
+/* Result container */
+.result {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 5%;
+}
+
+.result img {
+  max-width: 100%;
+  height: auto;
+}
+
+.result-content {
+  flex: 2;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.result-content h2 {
+  color: yellow;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .result {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .result img {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .result-content {
+    margin-left: 8%;
+  }
+}
+
+.navbar-logo {
+  width: 150px;
+}
+
+.share-icon {
+  display: none;
+  color: yellow;
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    width: 90px;
+    margin-right: 10px;
+  }
+
+  .navbar-toggler {
+    order: -1;
+  }
+
+  .share-icon {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
